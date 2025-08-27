@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        /* Reset and base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1f2937; background-color: #fefbfb; }
+        
+        /* Container */
+        .email-container { max-width: 600px; margin: 0 auto; background-color: #ffffff; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #e11d48 0%, #be185d 100%); padding: 40px 30px; text-align: center; }
+        .logo { color: #ffffff; font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .tagline { color: #fce7f3; font-size: 14px; }
+        
+        /* Content */
+        .content { padding: 40px 30px; }
+        .content h1 { color: #1f2937; font-size: 24px; font-weight: 600; margin-bottom: 20px; }
+        .content h2 { color: #374151; font-size: 20px; font-weight: 600; margin-bottom: 16px; margin-top: 24px; }
+        .content p { color: #4b5563; font-size: 16px; margin-bottom: 16px; }
+        .content .highlight { background-color: #fdf2f8; padding: 20px; border-radius: 8px; border-left: 4px solid #e11d48; margin: 20px 0; }
+        
+        /* Buttons */
+        .btn { display: inline-block; background: linear-gradient(135deg, #e11d48 0%, #be185d 100%); color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px; margin: 20px 0; transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3); }
+        .btn-secondary { background: #f3f4f6; color: #374151; border: 1px solid #d1d5db; }
+        .btn-secondary:hover { background: #e5e7eb; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        
+        /* Stats and info boxes */
+        .info-box { background-color: #fdf2f8; border: 1px solid #fce7f3; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; margin: 20px 0; }
+        .stat-item { text-align: center; padding: 16px; background-color: #f9fafb; border-radius: 8px; border: 1px solid #f3f4f6; }
+        .stat-number { font-size: 24px; font-weight: 700; color: #e11d48; }
+        .stat-label { font-size: 12px; color: #6b7280; margin-top: 4px; }
+        
+        /* Footer */
+        .footer { background-color: #f9fafb; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb; }
+        .footer p { color: #6b7280; font-size: 14px; margin-bottom: 8px; }
+        .footer .social-links { margin: 20px 0; }
+        .footer .social-links a { color: #9ca3af; text-decoration: none; margin: 0 12px; font-size: 14px; }
+        .footer .social-links a:hover { color: #e11d48; }
+        
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container { width: 100% !important; }
+            .header, .content, .footer { padding: 20px !important; }
+            .content h1 { font-size: 20px !important; }
+            .btn { display: block !important; text-align: center !important; }
+            .stats-grid { grid-template-columns: 1fr !important; }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .content { background-color: #1f2937 !important; }
+            .content h1, .content h2 { color: #f9fafb !important; }
+            .content p { color: #d1d5db !important; }
+            .info-box { background-color: #374151 !important; border-color: #4b5563 !important; }
+            .stat-item { background-color: #374151 !important; border-color: #4b5563 !important; }
+            .footer { background-color: #111827 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">SocialGrab</div>
+            <div class="tagline">#1 Free Video Downloader</div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            {{content}}
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>SocialGrab</strong> - Free Video Downloader</p>
+            <p>Download videos from Facebook, TikTok, Pinterest, and Instagram</p>
+            <div class="social-links">
+                <a href="https://socialgrab.app">Website</a>
+                <a href="https://socialgrab.app/help">Help Center</a>
+                <a href="https://socialgrab.app/contact">Contact</a>
+            </div>
+            <p style="font-size: 12px; color: #9ca3af;">
+                This email was sent by SocialGrab. If you no longer wish to receive emails, 
+                <a href="{{unsubscribe_url}}" style="color: #e11d48;">unsubscribe here</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

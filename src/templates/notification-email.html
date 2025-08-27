@@ -1,0 +1,39 @@
+<h1>{{notification_title}}</h1>
+
+<p>Hi {{user_name}},</p>
+
+<p>{{notification_message}}</p>
+
+{{#if has_action}}
+<div class="highlight">
+    <h2>{{action_title}}</h2>
+    <p>{{action_description}}</p>
+</div>
+
+<div style="text-align: center; margin: 30px 0;">
+    <a href="{{action_link}}" class="btn">{{action_button_text}}</a>
+</div>
+{{/if}}
+
+{{#if has_info_section}}
+<div class="info-box">
+    <h2>{{info_title}}</h2>
+    <p>{{info_content}}</p>
+</div>
+{{/if}}
+
+{{#if has_stats}}
+<div class="stats-grid">
+    {{#each stats}}
+    <div class="stat-item">
+        <div class="stat-number">{{number}}</div>
+        <div class="stat-label">{{label}}</div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+
+<p>{{closing_message}}</p>
+
+<p>Best regards,<br>
+<strong>The SocialGrab Team</strong></p>
